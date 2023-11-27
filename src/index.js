@@ -74,7 +74,7 @@ client.on('interactionCreate', async interaction => {
     if(interaction.customId === 'heartFace') {
       const guildID = interaction.guild.id;
 
-      authSchema.find({ GuildID: guildID }, async (err, data) => { // Fix the typo here
+      authSchema.find({ GuildID: guildID }, async (err, data) => { 
         if (data) {
           const roleID = data.RoleID;
           const member = interaction.member;
